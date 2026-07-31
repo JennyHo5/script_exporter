@@ -14,7 +14,9 @@ jobs:
     runs-on: ubuntu-latest
     if: startsWith(github.event.ref, 'refs/tags/v')
     permissions:
+      id-token: write
       contents: write
+      attestations: write
     strategy:
       matrix:
         platform:
